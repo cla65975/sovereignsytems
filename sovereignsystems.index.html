@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sovereign Systems — Your Business, Running Smooth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAFAF7;--bg2:#F0EFEB;--text:#1A1A1E;--text2:#5A5A60;--text3:#8A8A90;--accent:#2D5A27;--accent2:#3A7532;--accentLight:#E8F0E6;--warm:#C4854C;--warmLight:#FDF6EF;--border:#E2E1DC;--white:#FFFFFF}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:920px;margin:0 auto;padding:0 24px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.fade{animation:fadeUp .7s ease-out both}
+.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}
+
+/* NAV */
+nav{padding:20px 0;border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--accent);letter-spacing:-.5px}
+.logo span{color:var(--warm)}
+.nav-cta{background:var(--accent);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .2s}
+.nav-cta:hover{background:var(--accent2)}
+
+/* HERO */
+.hero{padding:80px 0 60px;text-align:center}
+.hero-badge{display:inline-block;padding:6px 16px;background:var(--accentLight);color:var(--accent);font-size:12px;font-weight:600;border-radius:20px;letter-spacing:.5px;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,52px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--text);letter-spacing:-.5px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{font-size:18px;color:var(--text2);line-height:1.6;max-width:580px;margin:0 auto 32px}
+.hero-cta{display:inline-block;background:var(--accent);color:#fff;padding:16px 40px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:inherit}
+.hero-cta:hover{background:var(--accent2);transform:translateY(-1px)}
+.hero-sub{font-size:13px;color:var(--text3);margin-top:12px}
+
+/* PROBLEM */
+.problem{padding:60px 0;border-top:1px solid var(--border)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+@media(max-width:600px){.problem-grid{grid-template-columns:1fr}}
+.problem-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px}
+.problem-card .hours{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--warm);margin-bottom:4px}
+.problem-card .label{font-size:14px;color:var(--text2);line-height:1.5}
+.section-label{font-size:12px;font-weight:600;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+.section-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.section-desc{font-size:15px;color:var(--text2);line-height:1.6}
+
+/* SERVICES */
+.services{padding:60px 0;border-top:1px solid var(--border)}
+.service-list{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.service-item{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;cursor:pointer;transition:border-color .2s}
+.service-item:hover{border-color:var(--accent)}
+.service-header{display:flex;justify-content:space-between;align-items:center}
+.service-name{font-size:17px;font-weight:700;color:var(--text)}
+.service-time{font-size:13px;color:var(--accent);font-weight:600;background:var(--accentLight);padding:4px 12px;border-radius:6px}
+.service-desc{font-size:14px;color:var(--text2);line-height:1.6;margin-top:10px;display:none}
+.service-item.open .service-desc{display:block}
+.service-example{font-size:13px;color:var(--text3);line-height:1.5;margin-top:8px;padding:10px 12px;background:var(--bg2);border-radius:8px}
+.service-example b{color:var(--text2)}
+
+/* PRICING */
+.pricing{padding:60px 0;border-top:1px solid var(--border)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+@media(max-width:700px){.pricing-grid{grid-template-columns:1fr}}
+.price-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 24px;position:relative;transition:border-color .2s}
+.price-card:hover{border-color:var(--accent)}
+.price-card.featured{border:2px solid var(--accent)}
+.price-badge{position:absolute;top:-1px;right:20px;background:var(--accent);color:#fff;font-size:11px;font-weight:600;padding:4px 12px;border-radius:0 0 8px 8px;letter-spacing:.5px}
+.price-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:4px}
+.price-amount{font-size:15px;color:var(--accent);font-weight:700;margin-bottom:12px}
+.price-desc{font-size:13px;color:var(--text2);line-height:1.5;margin-bottom:16px}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:8px}
+.price-features li{font-size:13px;color:var(--text2);padding-left:20px;position:relative;line-height:1.4}
+.price-features li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700;font-size:12px}
+
+/* AUDIT */
+.audit{padding:60px 0;border-top:1px solid var(--border)}
+.audit-box{background:var(--warmLight);border:1px solid #E8DDD0;border-radius:16px;padding:40px 32px;text-align:center;margin-top:24px}
+.audit-box h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:8px}
+.audit-box p{font-size:15px;color:var(--text2);line-height:1.6;max-width:480px;margin:0 auto 24px}
+.audit-list{text-align:left;max-width:460px;margin:0 auto 24px;display:flex;flex-direction:column;gap:6px}
+.audit-list div{font-size:14px;color:var(--text2);padding:8px 12px;background:rgba(255,255,255,.6);border-radius:8px}
+.audit-list div b{color:var(--text)}
+
+/* FOOTER */
+footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
+footer p{font-size:13px;color:var(--text3);line-height:1.8}
+footer .logo{margin-bottom:8px;display:inline-block}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+<div class="logo">Sovereign<span>.</span></div>
+<button class="nav-cta" onclick="document.getElementById('audit-section').scrollIntoView({behavior:'smooth'})">Free Audit</button>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="hero-badge fade d1">Memphis Business Systems</div>
+<h1 class="fade d2">Your business should<br>run <em>without</em> you<br>grinding every hour</h1>
+<p class="fade d3">We build smart systems that handle your customer messages, booking, follow-ups, and daily operations — so you can focus on the work that actually matters.</p>
+<button class="hero-cta fade d4" onclick="document.getElementById('audit-section').scrollIntoView({behavior:'smooth'})">Get Your Free AI Audit</button>
+<p class="hero-sub fade d5">15 minutes. No cost. No commitment. Just clarity.</p>
+</div>
+</section>
+
+<section class="problem">
+<div class="container">
+<div class="section-label fade">The problem</div>
+<div class="section-title fade">You didn't start a business to answer the same 30 DMs every day</div>
+<p class="section-desc fade">Most Memphis business owners spend 15+ hours a week on tasks that a system should handle. That's time away from your craft, your family, and your growth.</p>
+<div class="problem-grid fade">
+<div class="problem-card">
+<div class="hours">15+ hrs</div>
+<div class="label">spent weekly on admin, messages, and scheduling that could be automated</div>
+</div>
+<div class="problem-card">
+<div class="hours">73%</div>
+<div class="label">of leads go cold because the follow-up didn't happen fast enough</div>
+</div>
+<div class="problem-card">
+<div class="hours">$0</div>
+<div class="label">revenue from the social media posts you meant to publish but didn't</div>
+</div>
+<div class="problem-card">
+<div class="hours">24/7</div>
+<div class="label">is when customers reach out — but you're only available 8 hours a day</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="services">
+<div class="container">
+<div class="section-label">What we build</div>
+<div class="section-title">Systems that give you your time back</div>
+<p class="section-desc">We don't sell technology. We solve the specific problems eating your hours. Tap any service to see how it works.</p>
+<div class="service-list" id="service-list"></div>
+</div>
+</section>
+
+<section class="pricing">
+<div class="container">
+<div class="section-label">Pricing</div>
+<div class="section-title">Invest in your time, not more hours</div>
+<p class="section-desc">Every package pays for itself within the first month through time saved and leads captured.</p>
+<div class="pricing-grid">
+
+<div class="price-card">
+<div class="price-name">Starter</div>
+<div class="price-amount">$500 setup + $150/mo</div>
+<div class="price-desc">One automation that solves your biggest pain point. Proof of value before you expand.</div>
+<ul class="price-features">
+<li>One core system (you choose)</li>
+<li>Custom setup in 1 week</li>
+<li>Monthly monitoring + 1 tweak</li>
+<li>Email support</li>
+</ul>
+</div>
+
+<div class="price-card featured">
+<div class="price-badge">Most popular</div>
+<div class="price-name">Growth</div>
+<div class="price-amount">$1,500 setup + $400/mo</div>
+<div class="price-desc">Three systems working together. This is where most businesses start seeing real transformation.</div>
+<ul class="price-features">
+<li>Three integrated systems</li>
+<li>Custom setup in 2 weeks</li>
+<li>Weekly performance checks</li>
+<li>Unlimited tweaks + adjustments</li>
+<li>Priority support</li>
+</ul>
+</div>
+
+<div class="price-card">
+<div class="price-name">Full Orchestration</div>
+<div class="price-amount">$3,000+ setup + $800/mo</div>
+<div class="price-desc">Complete business system overhaul. For owners ready to stop working in the business and start working on it.</div>
+<ul class="price-features">
+<li>All 6 system types</li>
+<li>Custom workflows for your operation</li>
+<li>Full management + optimization</li>
+<li>Monthly strategy call</li>
+<li>Reporting dashboard</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="audit" id="audit-section">
+<div class="container">
+<div class="section-label">Start here</div>
+<div class="section-title">Free 15-minute AI opportunity audit</div>
+<div class="audit-box">
+<h3>Find out where you're bleeding time</h3>
+<p>We ask 8 questions about how your business runs today. You walk away knowing exactly where a system could save you 10+ hours a week. No tech jargon. No sales pressure. Just clarity.</p>
+<div class="audit-list">
+<div><b>1.</b> How do customers currently find and book with you?</div>
+<div><b>2.</b> What happens when someone messages you after hours?</div>
+<div><b>3.</b> How do you follow up with interested leads?</div>
+<div><b>4.</b> What task eats the most time every week?</div>
+</div>
+<a href="mailto:sovereign@sovereignsystems.it.com?subject=I%20want%20a%20free%20AI%20audit&body=Hi%2C%20I%27m%20interested%20in%20a%20free%20AI%20audit%20for%20my%20business.%0A%0ABusiness%20name%3A%20%0AWhat%20we%20do%3A%20%0ABiggest%20pain%20point%3A%20" class="hero-cta" style="text-decoration:none;display:inline-block">Book My Free Audit</a>
+<p style="font-size:12px;color:var(--text3);margin-top:12px">Or text us directly. We'll set up a 15-minute call this week.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="logo">Sovereign<span>.</span></div>
+<p>Smart systems for Memphis businesses.<br>Built with care. Designed for freedom.<br><br>sovereignsystems.it.com</p>
+</div>
+</footer>
+
+<script>
+const services = [
+  {name:"Customer Auto-Responder",time:"5-10 hrs saved/week",desc:"AI answers your DMs, emails, and website questions 24/7. Customers get instant responses. You stop losing leads to slow replies.",example:"A barbershop gets 30 DMs a day asking 'what time do you close?' — the system answers all of them instantly, books appointments, and sends confirmations."},
+  {name:"Appointment & Scheduling",time:"3-5 hrs saved/week",desc:"Customers book themselves through a link. System confirms, sends reminders, handles reschedules. No-shows drop by 40%.",example:"A salon owner stops playing phone tag. Clients book online, get a text reminder the day before, and cancellations automatically open the slot for waitlisted clients."},
+  {name:"Social Media Content Engine",time:"4-6 hrs saved/week",desc:"AI generates post ideas, captions, and hashtags tailored to your brand. You approve, it posts. Consistent presence without the work.",example:"A restaurant owner hasn't posted in 3 weeks. Now they get 5 ready-to-post options every Monday morning. They pick their favorites and the system handles the rest."},
+  {name:"Review & Reputation Manager",time:"2-3 hrs saved/week",desc:"Monitors Google and Yelp reviews. Drafts professional responses. Alerts you immediately to negative reviews so you can act fast.",example:"An auto shop gets a 1-star review at 11pm. By 11:01pm a professional response is drafted and waiting for the owner's approval."},
+  {name:"Lead Follow-Up System",time:"5-8 hrs saved/week",desc:"When a new lead comes in from any source, the system sends an instant personalized follow-up and nurtures them over days.",example:"A real estate agent gets a website inquiry at 2am. By 2:01am the lead has a personalized response with property suggestions. By morning, they've already replied."},
+  {name:"Operations Assistant",time:"3-5 hrs saved/week",desc:"Daily briefings, invoice reminders, inventory alerts, employee scheduling prompts. Your business talks to you so nothing falls through the cracks.",example:"A cleaning company owner gets a daily text: '3 jobs today. Maria confirmed. Supplies low on glass cleaner. Invoice #247 is 5 days overdue.'"}
+];
+
+const list = document.getElementById('service-list');
+services.forEach((s,i) => {
+  const el = document.createElement('div');
+  el.className = 'service-item';
+  el.innerHTML = `
+    <div class="service-header">
+      <div class="service-name">${s.name}</div>
+      <div class="service-time">${s.time}</div>
+    </div>
+    <div class="service-desc">
+      <p>${s.desc}</p>
+      <div class="service-example"><b>Example:</b> ${s.example}</div>
+    </div>
+  `;
+  el.addEventListener('click', () => {
+    const wasOpen = el.classList.contains('open');
+    document.querySelectorAll('.service-item').forEach(e => e.classList.remove('open'));
+    if (!wasOpen) el.classList.add('open');
+  });
+  list.appendChild(el);
+});
+</script>
+
+</body>
+</html>
