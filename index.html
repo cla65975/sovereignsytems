@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sovereign Systems — Your Business, Running Smooth</title>
+<title>Sovereign Systems — Built to Run Without You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -21,6 +21,9 @@ nav{padding:20px 0;border-bottom:1px solid var(--border)}
 nav .container{display:flex;justify-content:space-between;align-items:center}
 .logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--accent);letter-spacing:-.5px}
 .logo span{color:var(--warm)}
+.nav-right{display:flex;align-items:center;gap:12px;}
+.nav-login{background:transparent;color:var(--accent);border:1.5px solid var(--accent);padding:9px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none;}
+.nav-login:hover{background:var(--accentLight);}
 .nav-cta{background:var(--accent);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .2s}
 .nav-cta:hover{background:var(--accent2)}
 
@@ -33,6 +36,19 @@ nav .container{display:flex;justify-content:space-between;align-items:center}
 .hero-cta{display:inline-block;background:var(--accent);color:#fff;padding:16px 40px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:inherit}
 .hero-cta:hover{background:var(--accent2);transform:translateY(-1px)}
 .hero-sub{font-size:13px;color:var(--text3);margin-top:12px}
+
+/* TWO PATHS */
+.two-paths{padding:48px 0 40px;border-top:1px solid var(--border);}
+.paths-label{font-size:12px;font-weight:600;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:8px;text-align:center;}
+.paths-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;text-align:center;margin-bottom:24px;}
+.paths-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.paths-grid{grid-template-columns:1fr}}
+.path-card{background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:28px 24px;cursor:pointer;transition:all .2s;text-align:center;}
+.path-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,90,39,.08);}
+.path-icon{font-size:32px;margin-bottom:12px;}
+.path-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.path-desc{font-size:13px;color:var(--text2);line-height:1.5;}
+.path-cta{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;}
 
 /* PROBLEM */
 .problem{padding:60px 0;border-top:1px solid var(--border)}
@@ -93,41 +109,65 @@ footer .logo{margin-bottom:8px;display:inline-block}
 <nav>
 <div class="container">
 <div class="logo">Sovereign<span>.</span></div>
+<div class="nav-right">
+<a href="#" class="nav-login">Client Login</a>
 <button class="nav-cta" onclick="document.getElementById('audit-section').scrollIntoView({behavior:'smooth'})">Free Audit</button>
+</div>
 </div>
 </nav>
 
 <section class="hero">
 <div class="container">
-<div class="hero-badge fade d1">Memphis Business Systems</div>
-<h1 class="fade d2">Your business should<br>run <em>without</em> you<br>grinding every hour</h1>
-<p class="fade d3">We build smart systems that handle your customer messages, booking, follow-ups, and daily operations — so you can focus on the work that actually matters.</p>
-<button class="hero-cta fade d4" onclick="document.getElementById('audit-section').scrollIntoView({behavior:'smooth'})">Get Your Free AI Audit</button>
+<div class="hero-badge fade d1">Systems That Work While You Don't</div>
+<h1 class="fade d2">Your organization should<br>run <em>without</em> you<br>grinding every hour</h1>
+<p class="fade d3">We build custom systems that handle your operations, eliminate time-wasting tasks, and free your team to focus on what actually matters.</p>
+<button class="hero-cta fade d4" onclick="document.getElementById('audit-section').scrollIntoView({behavior:'smooth'})">Get Your Free Audit</button>
 <p class="hero-sub fade d5">15 minutes. No cost. No commitment. Just clarity.</p>
+</div>
+</section>
+
+<section class="two-paths">
+<div class="container">
+<div class="paths-label fade">Who we serve</div>
+<div class="paths-title fade">Built for businesses. Built for government. Built for anyone ready to run smarter.</div>
+<div class="paths-grid fade">
+<div class="path-card" onclick="document.getElementById('audit-section').scrollIntoView({behavior:'smooth'})">
+<div class="path-icon">🏢</div>
+<div class="path-name">Business Owners</div>
+<div class="path-desc">Stop answering the same messages, chasing leads, and doing work a system should handle. We build the automation so you can get back to growing.</div>
+<div class="path-cta">Get your free audit →</div>
+</div>
+<div class="path-card" onclick="document.getElementById('audit-section').scrollIntoView({behavior:'smooth'})">
+<div class="path-icon">🏛️</div>
+<div class="path-name">Cities & Government</div>
+<div class="path-desc">We research grants, build department tools, and automate the administrative work your team didn't sign up for. More time serving residents. Less time on paperwork.</div>
+<div class="path-cta">See how it works →</div>
+</div>
+</div>
 </div>
 </section>
 
 <section class="problem">
 <div class="container">
 <div class="section-label fade">The problem</div>
-<div class="section-title fade">You didn't start a business to answer the same 30 DMs every day</div>
-<p class="section-desc fade">Most Memphis business owners spend 15+ hours a week on tasks that a system should handle. That's time away from your craft, your family, and your growth.</p>
+<div class="section-title fade">You didn't build this to spend your days on tasks a system should handle</div>
+<p class="section-desc fade">Most organizations spend 15+ hours a week on tasks that a system should handle. That's time away from serving people, leading your team, and driving real growth.</p>
 <div class="problem-grid fade">
 <div class="problem-card">
 <div class="hours">15+ hrs</div>
-<div class="label">spent weekly on admin, messages, and scheduling that could be automated</div>
+<div class="label">spent weekly on admin, paperwork, and tasks that should run automatically</div>
 </div>
 <div class="problem-card">
 <div class="hours">73%</div>
 <div class="label">of leads go cold because the follow-up didn't happen fast enough</div>
 </div>
 <div class="problem-card">
-<div class="hours">$0</div>
-<div class="label">revenue from the social media posts you meant to publish but didn't</div>
+<div class="hours">$1M+</div>
+<div class="label">in funding left on the table from grants and opportunities nobody had time to research</div>
 </div>
 <div class="problem-card">
 <div class="hours">24/7</div>
-<div class="label">is when customers reach out — but you're only available 8 hours a day</div>
+<div class="label">is when things need attention — but your team is only available 8 hours a day</div>
 </div>
 </div>
 </div>
@@ -137,7 +177,7 @@ footer .logo{margin-bottom:8px;display:inline-block}
 <div class="container">
 <div class="section-label">What we build</div>
 <div class="section-title">Systems that give you your time back</div>
-<p class="section-desc">We don't sell technology. We solve the specific problems eating your hours. Tap any service to see how it works.</p>
+<p class="section-desc">We don't sell software. We solve the specific problems eating your team's hours — and we build the tools to fix them.</p>
 <div class="service-list" id="service-list"></div>
 </div>
 </section>
@@ -146,13 +186,13 @@ footer .logo{margin-bottom:8px;display:inline-block}
 <div class="container">
 <div class="section-label">Pricing</div>
 <div class="section-title">Invest in your time, not more hours</div>
-<p class="section-desc">Every package pays for itself within the first month through time saved and leads captured.</p>
+<p class="section-desc">Every package pays for itself through time saved, tasks eliminated, and opportunities captured.</p>
 <div class="pricing-grid">
 
 <div class="price-card">
 <div class="price-name">Starter</div>
 <div class="price-amount">$500 setup + $150/mo</div>
-<div class="price-desc">One automation that solves your biggest pain point. Proof of value before you expand.</div>
+<div class="price-desc">One system that solves your biggest pain point. Proof of value before you expand.</div>
 <ul class="price-features">
 <li>One core system (you choose)</li>
 <li>Custom setup in 1 week</li>
@@ -165,7 +205,7 @@ footer .logo{margin-bottom:8px;display:inline-block}
 <div class="price-badge">Most popular</div>
 <div class="price-name">Growth</div>
 <div class="price-amount">$1,500 setup + $400/mo</div>
-<div class="price-desc">Three systems working together. This is where most businesses start seeing real transformation.</div>
+<div class="price-desc">Three systems working together. This is where most organizations start seeing real transformation.</div>
 <ul class="price-features">
 <li>Three integrated systems</li>
 <li>Custom setup in 2 weeks</li>
@@ -178,7 +218,7 @@ footer .logo{margin-bottom:8px;display:inline-block}
 <div class="price-card">
 <div class="price-name">Full Orchestration</div>
 <div class="price-amount">$3,000+ setup + $800/mo</div>
-<div class="price-desc">Complete business system overhaul. For owners ready to stop working in the business and start working on it.</div>
+<div class="price-desc">Complete operational overhaul. For organizations ready to stop grinding and start scaling.</div>
 <ul class="price-features">
 <li>All 6 system types</li>
 <li>Custom workflows for your operation</li>
@@ -195,17 +235,17 @@ footer .logo{margin-bottom:8px;display:inline-block}
 <section class="audit" id="audit-section">
 <div class="container">
 <div class="section-label">Start here</div>
-<div class="section-title">Free 15-minute AI opportunity audit</div>
+<div class="section-title">Free 15-Minute Operations Audit</div>
 <div class="audit-box">
 <h3>Find out where you're bleeding time</h3>
-<p>We ask 8 questions about how your business runs today. You walk away knowing exactly where a system could save you 10+ hours a week. No tech jargon. No sales pressure. Just clarity.</p>
+<p>We ask 8 questions about how your organization runs today. You walk away knowing exactly where a system could save your team 10+ hours a week. No jargon. No pressure. Just clarity.</p>
 <div class="audit-list">
-<div><b>1.</b> How do customers currently find and book with you?</div>
-<div><b>2.</b> What happens when someone messages you after hours?</div>
-<div><b>3.</b> How do you follow up with interested leads?</div>
+<div><b>1.</b> What does your intake or request process currently look like?</div>
+<div><b>2.</b> What happens when someone contacts you after hours?</div>
+<div><b>3.</b> How do you currently track and follow up on open requests or projects?</div>
 <div><b>4.</b> What task eats the most time every week?</div>
 </div>
-<a href="mailto:sovereign@sovereignsystems.it.com?subject=I%20want%20a%20free%20AI%20audit&body=Hi%2C%20I%27m%20interested%20in%20a%20free%20AI%20audit%20for%20my%20business.%0A%0ABusiness%20name%3A%20%0AWhat%20we%20do%3A%20%0ABiggest%20pain%20point%3A%20" class="hero-cta" style="text-decoration:none;display:inline-block">Book My Free Audit</a>
+<a href="mailto:sovereign@sovereignsystems.it.com?subject=I%20want%20a%20free%20Operations%20Audit&body=Hi%2C%20I%27m%20interested%20in%20a%20free%20Operations%20Audit.%0A%0AOrganization%20name%3A%20%0AWhat%20we%20do%3A%20%0ABiggest%20pain%20point%3A%20" class="hero-cta" style="text-decoration:none;display:inline-block">Book My Free Operations Audit</a>
 <p style="font-size:12px;color:var(--text3);margin-top:12px">Or text us directly. We'll set up a 15-minute call this week.</p>
 </div>
 </div>
@@ -214,18 +254,18 @@ footer .logo{margin-bottom:8px;display:inline-block}
 <footer>
 <div class="container">
 <div class="logo">Sovereign<span>.</span></div>
-<p>Smart systems for Memphis businesses.<br>Built with care. Designed for freedom.<br><br>sovereignsystems.it.com</p>
+<p>Smart systems for organizations that refuse to stay stuck.<br>Built with care. Designed for freedom.<br><br>sovereignsystems.it.com</p>
 </div>
 </footer>
 
 <script>
 const services = [
-  {name:"Customer Auto-Responder",time:"5-10 hrs saved/week",desc:"AI answers your DMs, emails, and website questions 24/7. Customers get instant responses. You stop losing leads to slow replies.",example:"A barbershop gets 30 DMs a day asking 'what time do you close?' — the system answers all of them instantly, books appointments, and sends confirmations."},
-  {name:"Appointment & Scheduling",time:"3-5 hrs saved/week",desc:"Customers book themselves through a link. System confirms, sends reminders, handles reschedules. No-shows drop by 40%.",example:"A salon owner stops playing phone tag. Clients book online, get a text reminder the day before, and cancellations automatically open the slot for waitlisted clients."},
-  {name:"Social Media Content Engine",time:"4-6 hrs saved/week",desc:"AI generates post ideas, captions, and hashtags tailored to your brand. You approve, it posts. Consistent presence without the work.",example:"A restaurant owner hasn't posted in 3 weeks. Now they get 5 ready-to-post options every Monday morning. They pick their favorites and the system handles the rest."},
-  {name:"Review & Reputation Manager",time:"2-3 hrs saved/week",desc:"Monitors Google and Yelp reviews. Drafts professional responses. Alerts you immediately to negative reviews so you can act fast.",example:"An auto shop gets a 1-star review at 11pm. By 11:01pm a professional response is drafted and waiting for the owner's approval."},
-  {name:"Lead Follow-Up System",time:"5-8 hrs saved/week",desc:"When a new lead comes in from any source, the system sends an instant personalized follow-up and nurtures them over days.",example:"A real estate agent gets a website inquiry at 2am. By 2:01am the lead has a personalized response with property suggestions. By morning, they've already replied."},
-  {name:"Operations Assistant",time:"3-5 hrs saved/week",desc:"Daily briefings, invoice reminders, inventory alerts, employee scheduling prompts. Your business talks to you so nothing falls through the cracks.",example:"A cleaning company owner gets a daily text: '3 jobs today. Maria confirmed. Supplies low on glass cleaner. Invoice #247 is 5 days overdue.'"}
+  {name:"Operations Audit & System Design",time:"Clarity in 15 min",desc:"We map how your organization currently runs, identify the biggest time drains, and design a system that eliminates them. This is where every engagement starts.",example:"A city department spends 12 hours a week manually creating printed notices and processing paper requests. We identify 3 automations that cut that to under 2 hours — and build them."},
+  {name:"Grant Research & Narrative Writing",time:"Federal & State",desc:"We identify funding opportunities aligned with your goals, research eligibility, and write publication-ready grant narratives. You provide the vision. We build the case that gets it funded.",example:"A municipality wants to launch a school safety program but has no budget. We identify a federal grant worth up to $500,000, write the full narrative, and manage the submission timeline."},
+  {name:"Custom Department Tools",time:"3-10 hrs saved/week",desc:"We build web-based tools that eliminate repetitive tasks — sign generators, booking systems, invoice trackers, and more. Built for your team, branded for your organization.",example:"A parks department spends 30 minutes hand-typing closure signs every week. We build a tool where staff fill in 5 fields and hit print. Done in 90 seconds."},
+  {name:"Automated Follow-Up & Outreach",time:"5-8 hrs saved/week",desc:"When a new inquiry comes in from any source, the system sends an instant personalized response and follows up automatically so nothing falls through the cracks.",example:"A service business gets a website inquiry at 2am. By 2:01am the contact has a personalized reply. By morning, they've already responded back."},
+  {name:"Client & Resident Portal",time:"Always-on access",desc:"Every client or department gets a dedicated portal — their tools, documents, requests, and communications in one place. No lost emails. No scattered files.",example:"A city department logs into their Sovereign Systems portal to print a park sign, check the status of a grant application, and message their team — all from one screen."},
+  {name:"Reporting & Strategy",time:"Monthly check-ins",desc:"Monthly updates on system performance, grant statuses, and new opportunities. We stay ahead of deadlines so you never miss funding because nobody had time to look.",example:"A municipality receives a monthly report showing 3 active grant pursuits, 2 tools deployed, and 47 hours saved by their team that month."}
 ];
 
 const list = document.getElementById('service-list');
