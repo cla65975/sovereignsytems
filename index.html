@@ -167,7 +167,7 @@
     .section-sub { font-size: 16px; color: var(--muted); font-weight: 300; max-width: 520px; line-height: 1.7; }
 
     /* LANES */
-    .lanes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 3rem; }
+    .lanes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 3rem; }
     .lane-card {
       border: 1px solid var(--border-subtle);
       border-radius: 8px; padding: 2.5rem;
@@ -209,6 +209,16 @@
     }
     .lane-link::after { content: '→'; transition: transform 0.2s; }
     .lane-link:hover::after { transform: translateX(4px); }
+
+    /* CLUBS */
+    .clubs-section { background: var(--dark); border-top: 1px solid var(--border-subtle); }
+    .club-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; margin-top: 3rem; align-items: start; }
+    .club-list { list-style: none; }
+    .club-list li { padding: 14px 0; border-bottom: 1px solid var(--border-subtle); font-size: 15px; color: rgba(255,255,255,0.8); font-weight: 300; }
+    .club-list li b { color: var(--white); font-weight: 500; display: block; margin-bottom: 2px; }
+    .club-price { border: 1px solid rgba(201,168,76,0.5); border-radius: 8px; padding: 2rem; background: var(--dark-3); }
+    .club-note { font-size: 12px; color: var(--muted); margin-top: 1rem; line-height: 1.5; }
+    .club-note a { color: var(--gold-light); }
 
     /* PRICING */
     .pricing-section { background: var(--dark-2); }
@@ -264,7 +274,7 @@
       font-size: 22px; font-weight: 400; margin-bottom: 10px;
     }
     .audit-box p { font-size: 14px; color: var(--muted); margin-bottom: 2rem; line-height: 1.7; font-weight: 300; }
-    .audit-choose { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .audit-choose { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .audit-btn {
       border: 1px solid rgba(201,168,76,0.25);
       border-radius: 6px; padding: 1.5rem 1.25rem;
@@ -307,6 +317,10 @@
     .footer-link:hover { color: var(--gold); }
 
     /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .lanes-grid { grid-template-columns: 1fr; }
+      .club-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 768px) {
       nav { padding: 1rem 1.25rem; }
       .hero { padding: 4rem 1.25rem 3rem; }
@@ -342,16 +356,16 @@
 <nav>
   <div class="nav-logo">Sovereign.</div>
   <div class="nav-right">
-    <a href="#audit" class="btn-nav-ghost">Client Login</a>
+    <a href="#clubs" class="btn-nav-ghost">For Sports Clubs</a>
     <a href="#audit" class="btn-nav-gold">Free Audit</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <span class="hero-eyebrow">Operations · Automation · Grant Research</span>
+  <span class="hero-eyebrow">Youth Sports Clubs · Business · Government</span>
   <h1>Systems that work<br><em>while you don't</em></h1>
-  <p class="hero-sub">We build the workflows, tools, and automations that free your team from the tasks eating their time — whether you run a business or a city department.</p>
+  <p class="hero-sub">We build the workflows, tools, and automations that free your team from the tasks eating their time — whether you run a youth sports club, a business, or a city department.</p>
   <div class="hero-cta">
     <a href="#audit" class="btn-gold">Get your free audit</a>
     <a href="#lanes" class="btn-outline">See what we build</a>
@@ -361,16 +375,16 @@
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat-cell">
-    <div class="stat-num">15+</div>
-    <div class="stat-label">Hours saved per week on average</div>
+    <div class="stat-num">10+</div>
+    <div class="stat-label">Hours a week our systems are built to save</div>
   </div>
   <div class="stat-cell">
-    <div class="stat-num">$1M+</div>
-    <div class="stat-label">In grants researched for clients</div>
+    <div class="stat-num">14 days</div>
+    <div class="stat-label">From kickoff to your system running</div>
   </div>
   <div class="stat-cell">
-    <div class="stat-num">73%</div>
-    <div class="stat-label">Of leads go cold without fast follow-up</div>
+    <div class="stat-num">$0</div>
+    <div class="stat-label">Cost of your 15-minute audit</div>
   </div>
   <div class="stat-cell">
     <div class="stat-num">24/7</div>
@@ -382,11 +396,23 @@
 <section id="lanes">
   <div class="section-inner">
     <span class="section-tag">Who we serve</span>
-    <h2 class="section-h2">Built for two worlds</h2>
+    <h2 class="section-h2">Built for three worlds</h2>
     <p class="section-sub">Same expertise. Different client. We solve operational problems and find opportunity — the world you're in just changes who we build for.</p>
     <div class="lanes-grid">
-      <div class="lane-card">
+      <div class="lane-card featured">
         <div class="lane-num">01</div>
+        <h3>Youth Sports Clubs</h3>
+        <p>Built by a former college athlete and JUCO coach. We automate the dues, parent updates, and repeat questions that eat a director's nights, so you can coach.</p>
+        <ul>
+          <li>Dues reminders & past-due follow-up</li>
+          <li>Schedule-change alerts to every family</li>
+          <li>Answers to repeat parent questions</li>
+          <li>Recruiting profiles for your players</li>
+        </ul>
+        <a href="#clubs" class="lane-link">See Club Autopilot</a>
+      </div>
+      <div class="lane-card">
+        <div class="lane-num">02</div>
         <h3>Business Owners</h3>
         <p>Stop answering the same messages, chasing leads, and doing work a system should handle. We build the automation so you can get back to growing.</p>
         <ul>
@@ -397,8 +423,8 @@
         </ul>
         <a href="#audit" class="lane-link">Get your free audit</a>
       </div>
-      <div class="lane-card featured">
-        <div class="lane-num">02</div>
+      <div class="lane-card">
+        <div class="lane-num">03</div>
         <h3>Cities & Government</h3>
         <p>We research grants, build department tools, and automate the administrative work your team didn't sign up for. More time serving residents. Less time on paperwork.</p>
         <ul>
@@ -413,6 +439,38 @@
   </div>
 </section>
 
+<!-- CLUB AUTOPILOT -->
+<section class="clubs-section" id="clubs">
+  <div class="section-inner">
+    <span class="section-tag">For youth sports clubs</span>
+    <h2 class="section-h2">Club Autopilot: systems that work while you coach</h2>
+    <p class="section-sub">Built on the tools your club already uses, like LeagueApps, TeamSnap and SportsEngine. No new app for parents to learn. We set it up and run it for you.</p>
+    <div class="club-grid">
+      <ul class="club-list">
+        <li><b>Dues Autopilot</b>Automatic payment reminders, past-due follow-ups and payment-plan nudges.</li>
+        <li><b>Parent Update Engine</b>One schedule change reaches every family on the team by text and email.</li>
+        <li><b>Inbox Assistant</b>Ready answers to the questions parents ask every season.</li>
+        <li><b>Director's Monday Report</b>Who has paid, who is behind, and what needs a human.</li>
+        <li><b>Season Launch Kit</b>Tryout, registration and handbook messages ready before the season starts.</li>
+      </ul>
+      <div class="price-card club-price">
+        <div class="price-tier">Founding Club · 3 spots</div>
+        <div class="price-amount">$997 <span>setup</span></div>
+        <div class="price-monthly">+ $497 / month</div>
+        <div class="price-divider"></div>
+        <ul>
+          <li>All 5 systems, live in 14 days</li>
+          <li>Monthly check-in and fixes</li>
+          <li>Your guarantee: if we don't move 25% of past-due families to paid or a payment plan by day 45, month 2 is free</li>
+          <li>Add-on: Recruit Ready recruiting profiles, $1,500 per season</li>
+        </ul>
+        <p class="club-note">Full rate after founding spots fill: $1,997 setup + $797/month.</p>
+        <a href="#audit" class="btn-gold" style="margin-top:1.25rem;">Get your free club audit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROOF NUMBERS -->
 <section class="proof-section">
   <div class="section-inner">
@@ -420,16 +478,16 @@
     <h2 class="section-h2">You didn't build this to spend your days on tasks a system should handle</h2>
     <div class="proof-grid">
       <div class="proof-card">
-        <div class="proof-big">15+</div>
-        <div class="proof-desc">Hours spent weekly on admin, paperwork, and tasks that should run automatically</div>
+        <div class="proof-big">10–12%</div>
+        <div class="proof-desc">Of youth sports revenue is estimated to go uncollected (<a href="https://jvavolleyball.org/?p=5339" target="_blank" style="color:var(--gold-light);">industry estimate</a>)</div>
       </div>
       <div class="proof-card">
-        <div class="proof-big">73%</div>
-        <div class="proof-desc">Of leads go cold because the follow-up didn't happen fast enough</div>
+        <div class="proof-big">1 → All</div>
+        <div class="proof-desc">One update should reach every customer, family or resident without 40 separate texts</div>
       </div>
       <div class="proof-card">
-        <div class="proof-big">$1M+</div>
-        <div class="proof-desc">In funding left on the table from grants nobody had time to research</div>
+        <div class="proof-big">Missed</div>
+        <div class="proof-desc">Grant deadlines and funding nobody had time to research</div>
       </div>
       <div class="proof-card">
         <div class="proof-big">24/7</div>
@@ -460,7 +518,7 @@
         </ul>
       </div>
       <div class="price-card featured-price">
-        <div class="price-badge">Most popular</div>
+        <div class="price-badge">Recommended</div>
         <div class="price-tier">Growth</div>
         <div class="price-amount">$1,500 <span>setup</span></div>
         <div class="price-monthly">+ $400 / month</div>
@@ -497,12 +555,17 @@
   <div class="audit-inner">
     <span class="section-tag" style="display:block; text-align:center;">Start here</span>
     <h2 class="section-h2" style="text-align:center;">Free 15-minute operations audit</h2>
-    <p class="section-sub" style="margin: 0 auto; text-align:center;">8 questions about how your organization runs today. You walk away knowing exactly where a system could save your team 10+ hours a week. No jargon. No pressure. Just clarity.</p>
+    <p class="section-sub" style="margin: 0 auto; text-align:center;">Running a youth sports club? Ask for the Dues & Parent-Communication Audit. 8 questions about how your organization runs today. You walk away knowing exactly where a system could save your team 10+ hours a week. No jargon. No pressure. Just clarity.</p>
     <div class="audit-box">
       <span class="audit-step-label">Step 1 — Tell us who you are</span>
       <h3>Find out where you're bleeding time</h3>
       <p>We ask different questions depending on your world. Choose your path and we'll tailor the audit to you.</p>
       <div class="audit-choose">
+        <a href="https://tally.so/r/OD8AKR" target="_blank" class="audit-btn">
+          <span class="audit-icon">🏀</span>
+          <span class="audit-title">I run a youth sports club</span>
+          <span class="audit-sub">Dues, parent updates, tryouts, recruiting</span>
+        </a>
         <a href="https://tally.so/r/OD8AKR" target="_blank" class="audit-btn">
           <span class="audit-icon">🏢</span>
           <span class="audit-title">I'm a business owner</span>
@@ -515,7 +578,7 @@
         </a>
       </div>
     </div>
-    <p class="audit-note">15 minutes. No cost. No commitment. Just clarity.</p>
+    <p class="audit-note">15 minutes. No cost. No commitment. Just clarity.<br>Prefer email? <a href="mailto:sovereignsystems@aol.com" style="color:var(--gold-light);">sovereignsystems@aol.com</a></p>
   </div>
 </section>
 
@@ -523,7 +586,7 @@
 <footer>
   <div class="footer-logo">Sovereign.</div>
   <div class="footer-tagline">Smart systems for organizations that refuse to stay stuck.</div>
-  <a href="https://tally.so/r/OD8AKR" target="_blank" class="footer-link">sovereignsystems.it.com</a>
+  <a href="mailto:sovereignsystems@aol.com" class="footer-link">sovereignsystems@aol.com</a>
 </footer>
 
 </body>
